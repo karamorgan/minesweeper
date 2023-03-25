@@ -1,0 +1,202 @@
+:root {
+    --background: #f4ecd4;
+    --light-tan: #ddca94;
+    --light-brown: #b8a368;
+    --medium-brown: #726234;
+    --dark-brown: #443817;
+    --title-text: 'IM Fell English SC', cursive;
+    --body-text: 'IM Fell English', serif;
+}
+
+html {
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+body {
+    height: 90vh;
+    border: 1px solid var(--dark-brown);
+    outline: 1px solid var(--dark-brown);
+    outline-offset: 2px;
+    margin: 5vh;
+    position: relative;
+}
+
+#title-div {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--title-text);
+    font-size: 3rem;
+    color: var(--dark-brown);
+    line-height: 1;
+    margin: 0;
+}
+
+h2 {
+    font-family: var(--body-text);
+    font-style: italic;
+    color: var(--medium-brown);
+    font-size: 2rem;
+    line-height: 1;
+    margin: 0;
+}
+
+#content-div {
+    display: flex;
+    justify-content: center;
+    font-family: var(--body-text);
+}
+
+#toolbar-div {
+    width: 8rem;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#counters-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--medium-brown);
+}
+
+.counter {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#buttons-div {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#level-div {
+    height: 70%;
+    border-radius: 0.5rem;
+    outline-offset: 1px;
+    font-size: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#level-div > label {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    color: var(--light-brown);
+    transition: all 0.5s ease-out;
+    z-index: 1;
+}
+
+#level-div > input:checked + label {
+    color: var(--dark-brown);
+    cursor: default;
+}
+
+#level-div > input + label:hover {
+    color:var(--dark-brown);
+}
+
+input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+}
+
+#level-selector {
+    width: 100%;
+    height: 30%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: var(--light-brown);
+    border: outset var(--light-tan);
+    border-radius: 0.5rem;
+    transition: top 0.5s ease-out;
+}
+
+input[id='easy']:checked ~ #level-selector {
+    top: 0%;
+}
+
+input[id='medium']:checked ~ #level-selector {
+    top: 35%;
+}
+
+input[id='hard']:checked ~ #level-selector {
+    top: 70%;
+}
+
+#reset-btn {
+    width: 100%;
+    height: 21%;
+    background-color: var(--light-brown);
+    color: var(--dark-brown);
+    border-radius: 0.5rem;
+    border: outset var(--light-tan);
+    font-family: var(--body-text);
+    font-size: 1.2rem;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+#reset-btn:hover {
+    border: inset var(--light-tan);
+}
+
+canvas {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 5vh;
+}
+
+.fa-rotate-right {
+    padding-right: 0.3rem;
+}
+
+#icons-div {
+    position: absolute;
+    box-sizing: border-box;
+    width: 6rem;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 2rem;
+    color: var(--medium-brown);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 10px;
+    }
+}

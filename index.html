@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="minesweeperStyle.css">
+    <script src="https://kit.fontawesome.com/1e6b7799de.js" crossorigin="anonymous"></script>
+    <title>Minesweeper</title>
+</head>
+<body>
+    <div id="title-div">
+        <h1>Captain Morgan's Minesweeper</h1>
+        <h2>Hunt for Buried Treasure</h2>
+    </div>
+    <div id="content-div">
+        <div id="toolbar-div">
+            <div id="counters-div">
+                <label for="flag-count" class="counter">Flags:<span id="flag-count"></span></label>
+                <label for="time-elapsed" class="counter">Time:<span id="time-elapsed"></span></label>
+            </div>
+            <div id="buttons-div">
+                <div id="level-div">
+                    <input type="radio" id="easy" value="easy" name="level" checked>
+                    <label for="easy">Easy</label>
+                    <input type="radio" id="medium" value="medium" name="level">
+                    <label for="medium">Medium</label>
+                    <input type="radio" id="hard" value="hard" name="level">
+                    <label for="hard">Hard</label>
+                    <div id="level-selector"></div>
+                </div>
+                <button id="reset-btn"><i class="fa-solid fa-rotate-right"></i>Restart</button>
+            </div>
+        </div>
+        <canvas id="canvas">Your browser does not support the HTML5 canvas tag.</canvas>
+        <div id="icons-div">
+            <i class="fa-brands fa-square-js"></i>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+        </div>
+    </div>
+    <script src="minesweeper.js"></script>
+</body>
+</html>
